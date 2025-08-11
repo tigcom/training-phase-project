@@ -1,0 +1,67 @@
+{
+  "realm": "microservice-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "springboot-app",
+      "secret": "6nBx7XXCHUJBWrVtNTzpDKsahQAlWl9M",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "redirectUris": [
+        "http://api-gateway:5110/*"
+      ],
+      "webOrigins": ["+"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "attributes": {
+        "frontendUrl": "http://keycloak:8081"
+      }
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "USER"
+      },
+      {
+        "name": "ADMIN"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "testuser",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "testuser@example.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["USER"]
+    },
+    {
+      "username": "KHANG",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "KHANG",
+      "lastName": "PHUC",
+      "email": "phuckhang@example.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["ADMIN"]
+    }
+  ]
+}

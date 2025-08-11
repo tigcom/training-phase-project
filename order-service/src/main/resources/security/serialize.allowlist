@@ -1,0 +1,5 @@
+org.example.common_lirbary.dto.UserDTO
+org.example.common_lirbary.dto.productDTO
+
+
+dubbo.serialization.allowlist=jakarta.persistence.EntityNotFoundException
